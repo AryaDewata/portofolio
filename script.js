@@ -27,15 +27,16 @@ setTimeout(() => {
 
 // Pesan
 const result = document.querySelector("#result");
+const nama = document.querySelector("#nama");
+const pesan = document.querySelector("#pesan");
 function kirimPesan() {
-  let nama = document.querySelector("#nama").value.trim();
-  let pesan = document.querySelector("#pesan").value.trim();
-  if (nama.length < 1 || pesan.length < 1) return false;
+  if (nama.value.trim().length < 1) return nama.focus();
+  if (pesan.value.trim().length < 1) return pesan.focus();
   result.innerHTML += `
           <div class="py-2 my-2 px-3 shadow-sm rounded-4 overflow-hidden" style="border-top-left-radius: 0 !important;">
-                <p class="mb-0" style="font-size: 14px;">${pesan}</p>
-                <p class="mb-0 text-secondary" style="font-size: 12px;">${nama}</p>
+                <p class="mb-0" style="font-size: 14px;">${pesan.value.trim()}</p>
+                <p class="mb-0 text-secondary" style="font-size: 12px;">${nama.value.trim()}</p>
             </div>`;
-  document.querySelector("#nama").value = "";
-  document.querySelector("#pesan").value = "";
+  nama.value = "";
+  pesan.value = "";
 }

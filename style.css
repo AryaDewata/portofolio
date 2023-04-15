@@ -54,6 +54,9 @@ section {
 section span.h6 {
   color: rgb(180, 180, 180) !important;
 }
+.btn:hover {
+  opacity: 70% !important;
+}
 
 /* Scrollbar Style */
 ::-webkit-scrollbar {
@@ -134,4 +137,14 @@ header .picture img {
   #contact .w-25 {
     margin: 0 0 18px;
   }
+}
+
+/* Footer Style */
+footer p {
+  position: relative;
+  z-index: 1;
+}
+.footer-waves {
+  left: 0;
+  bottom: 0;
 }
