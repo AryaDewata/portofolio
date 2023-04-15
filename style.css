@@ -1,6 +1,45 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
+/* Animation */
+.js-scroll {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+.js-scroll.scrolled {
+  opacity: 1;
+}
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1000ms ease-in-out both;
+}
+.scrolled.slide-right {
+  animation: slide-in-right 1500ms ease-in-out both;
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Document's Style */
 * {
   font-family: "Nunito";
@@ -12,11 +51,11 @@ section {
   position: relative;
   z-index: 1;
 }
-section span.h5 {
-  color: rgb(200, 200, 200) !important;
+section span.h6 {
+  color: rgb(180, 180, 180) !important;
 }
 
-/* Scrollbar */
+/* Scrollbar Style */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -25,13 +64,14 @@ section span.h5 {
   background: rgb(150, 150, 150);
 }
 
-/* Header */
+/* Header Style */
 header {
   padding: 48px 0 84px;
 
-  background: linear-gradient(#103976, #2456a0, #417cd6, #5f9fff);
+  background: linear-gradient(rgba(15, 60, 120, 0.7), rgba(35, 85, 160, 0.7), rgba(65, 125, 215, 0.7), rgba(95, 160, 255, 0.7)), url("https://img.freepik.com/free-photo/white-cloud-blue-sky_74190-7709.jpg");
+  background-size: cover;
 
-  text-shadow: 0.1px 0.1px 6px #103976;
+  text-shadow: 0.5px 0.5px 6px rgba(15, 60, 120, 1);
 }
 header .picture {
   width: 162px;
@@ -39,16 +79,16 @@ header .picture {
   aspect-ratio: 1 / 1;
   overflow: hidden;
 
-  box-shadow: 0.1px 0.1px 6px #103976;
+  box-shadow: 0.5px 0.5px 6px rgba(15, 60, 120, 1);
 }
 header .picture img {
   height: 100%;
 }
 .astronaut {
-  width: 148px;
+  width: 168px;
 
-  right: 3%;
-  bottom: 12%;
+  right: 2%;
+  bottom: 6%;
   z-index: 1;
 
   animation: 4s alternate-reverse infinite astronaut;
@@ -74,9 +114,6 @@ header .picture img {
   header .picture {
     width: 142px;
   }
-  header .picture img {
-    height: 100%;
-  }
   .astronaut {
     width: 118px;
 
@@ -84,6 +121,17 @@ header .picture img {
     bottom: -16px;
   }
   .header-waves {
-    bottom: 0;
+    bottom: -2px;
+  }
+}
+
+/* Contact Style */
+@media (max-width: 480px) {
+  #contact .w-25,
+  #contact .w-75 {
+    width: 100% !important;
+  }
+  #contact .w-25 {
+    margin: 0 0 18px;
   }
 }
