@@ -1,0 +1,89 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* Document's Style */
+* {
+  font-family: "Nunito";
+}
+body {
+  overflow: overlay;
+}
+section {
+  position: relative;
+  z-index: 1;
+}
+section span.h5 {
+  color: rgb(200, 200, 200) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgb(150, 150, 150);
+}
+
+/* Header */
+header {
+  padding: 48px 0 84px;
+
+  background: linear-gradient(#103976, #2456a0, #417cd6, #5f9fff);
+
+  text-shadow: 0.1px 0.1px 6px #103976;
+}
+header .picture {
+  width: 162px;
+
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+
+  box-shadow: 0.1px 0.1px 6px #103976;
+}
+header .picture img {
+  height: 100%;
+}
+.astronaut {
+  width: 148px;
+
+  right: 3%;
+  bottom: 12%;
+  z-index: 1;
+
+  animation: 4s alternate-reverse infinite astronaut;
+}
+@keyframes astronaut {
+  0% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(12);
+  }
+}
+.header-waves {
+  left: 0;
+  bottom: -25%;
+
+  transform: scaleX(-1);
+}
+@media (max-width: 480px) {
+  header {
+    padding: 48px 0 84px;
+  }
+  header .picture {
+    width: 142px;
+  }
+  header .picture img {
+    height: 100%;
+  }
+  .astronaut {
+    width: 118px;
+
+    right: 8px;
+    bottom: -16px;
+  }
+  .header-waves {
+    bottom: 0;
+  }
+}
