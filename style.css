@@ -45,6 +45,7 @@
   font-family: "Nunito";
 }
 body {
+  width: 100vw !important;
   overflow: overlay;
 }
 section {
